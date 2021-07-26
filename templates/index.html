@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Flask App</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+                <h3>Welcome</h3>
+                <p>Demo Flask App...!</p>
+
+            </div>
+            <div class="col-md-9 register-right">
+
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Add Data To MySql Database</h3>
+                        <!-- ------------------------Form starts--------------------- -->
+                        <form method="POST" action="">
+
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="fname" placeholder="First Name *"
+                                            value="" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="email" placeholder="Your Email *"
+                                            value="" />
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="state"
+                                            placeholder="Enter Your State *" value="" />
+                                    </div>
+
+
+
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="lname" placeholder="Last Name *"
+                                            value="" />
+                                    </div>
+
+
+
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="city"
+                                            placeholder="Enter Your City *" value="" />
+                                    </div>
+                                    <input type="submit" class="btnRegister" value="Submit" />
+                                </div>
+                            </div>
+                        </form>
+
+                        
+
+
+                        <!-- -----------------------------Form ends-------------------------------------- -->
+
+                    </div>
+
+                    
+
+                </div>
+                
+            </div>
+            
+            <div> 
+                <a href="{{ url_for('users') }}"><button type="button" class="btn btn-secondary">Data</button></a>
+            
+              </div>
+
+              
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users Table</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  </style>
+</head>
+
+<h2>Users Table</h2>
+<div style="padding: 5%;">
+
+
+  <table>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>City</th>
+      <th>State</th>
+    </tr>
+    {% for user in userDetails %}
+    <tr>
+      <td> {{user[0]}} </td>
+      <td> {{user[1]}} </td>
+      <td> {{user[2]}} </td>
+      <td> {{user[3]}} </td>
+      <td> {{user[4]}} </td>
+    </tr>
+    {% endfor %}
+
+  </table>
+
+  <div style="margin-top:2%"> 
+    <a href="{{ url_for('index') }}"><button type="button" class="btn btn-secondary">&lt;&lt; Add New Data</button></a>
+  </div>
+  
+
+</div>
+
+<body>
+
+</body>
+
+</html>
