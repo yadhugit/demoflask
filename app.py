@@ -24,7 +24,7 @@ def establish_connection():
 #     gain connection
 #     """
 #     cnx = mysql.connect(
-#         user='root', password='',
+#         user='YourUserName', password='YourPassword',
 #         host='localhost',
 #         database='testdb',
 #         use_pure=False

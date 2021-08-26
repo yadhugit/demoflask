@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: db-flask-credentials
+type: Opaque
+data:
+  USER_NAME: cm9vdA==
+  PASSWORD: dG9vcjEyMw==
